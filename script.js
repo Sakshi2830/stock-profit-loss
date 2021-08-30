@@ -9,17 +9,25 @@ function calculateLossAndProfit(initial, quantity, current){
     if(initial > current){
         var loss = (initial - current) * quantity
         var lossPercentage = (loss / initial) * 100
-        console.log(`loss${loss} and percentage ${lossPercentage}`);
+        outputBox.innerText = `Hey the loss is ${loss} and percentage is ${lossPercentage}`
     }else if(current > initial){
         var profit = (current - initial ) * quantity
         var profitPercentage = (profit / initial) * 100
-        console.log(`profit${profit} and percentage ${profitPercentage}`);
+       outputBox.innerText =`Hey the profit is ${profit} and percentage is ${profitPercentage}`
 
     }else{
-
+        outputBox.innerText = `No Pain No Gain!! No Gain No Pain!1`
 
     }
 }
 
-calculateLossAndProfit(100,10,10)
-calculateLossAndProfit(20,10,100)
+submitBtn.addEventListener('click', submitHandler) ;
+
+function submitHandler(){
+    var ip = Number(initialPrice.value);
+    var qty = Number(stocksQuantity.value);
+    var curr = Number(currentPrice.value);
+
+    calculateLossAndProfit(ip,qty,curr)
+}
+
