@@ -10,11 +10,12 @@ function calculateLossAndProfit(initial, quantity, current){
         var loss = (initial - current) * quantity
         var lossPercentage = ((loss / initial) * 100).toFixed(2)
         outputBox.innerText = `Hey the loss is ${loss} and percentage is ${lossPercentage}`
+        outputBox.style.backgroundColor = "rgba(221, 116, 116, 0.87)"
     }else if(current > initial){
-        var profit = ((current - initial ) * quantity).toFixed(2)
-        var profitPercentage = (profit / initial) * 100
-       outputBox.innerText =`Hey the profit is ${profit} and percentage is ${profitPercentage}`
-
+        var profit = ((current - initial ) * quantity)
+        var profitPercentage = ((profit / initial) * 100).toFixed(2)
+        outputBox.innerText =`Hey the profit is ${profit} and percentage is ${profitPercentage}`
+        outputBox.style.backgroundColor = "rgba(73, 181, 73, 0.891)"
     }else{
         outputBox.innerText = `No Pain No Gain!! No Gain No Pain!1`
 

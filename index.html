@@ -8,21 +8,25 @@
     <title>Stocks-Profit & Loss</title>
 </head>
 <body>
-    <h1>Stok Profit and Loss</h1>
+    
 
-    <main>
-        <label for="initial-price">Initial Price <input type="number" placeholder="Enter the initial Price here" id="initial-price"/>
-        </label>
-        
-        <label for="stocks-quantity">Quantity of Stocks<input type="number" placeholder="Enter the number of stocks bought" id="stocks-quantity">
-        </label>
-        
-        <label for="current-price">Current Price<input type="number" placeholder="Enter the current prie of the stock" id="current-price"/>
-        </label>
-        
-        <button id="submit-btn">Tell Me!</button>
+    <main class="container">
+        <header><h1>Check Profit / Loss on your Stock</h1></header>
+        <div class="input">
+            <label for="initial-price">Initial Price   <input type="number"  id="initial-price"/>
+            </label>
+            
+            <label for="stocks-quantity">Quantity of Stocks  <input type="number"  id="stocks-quantity">
+            </label>
+            
+            <label for="current-price">Current Price  <input type="number"  id="current-price"/>
+            </label>
+            
+            <button id="submit-btn">Tell Me!</button>
+            
+        </div>
 
-        <div id="output-box"></div>
+        <div id="output-box">Stock Market is subject to market Risk</div>
     </main>
 <script src="script.js"></script>
 </body>
